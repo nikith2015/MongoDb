@@ -1,0 +1,9 @@
+image: maven:3.3.9
+
+pipelines:
+  branches:
+    master:
+      - step:
+          script:
+            - bash configure-maven.sh
+            - mvn -B verify
