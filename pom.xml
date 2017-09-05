@@ -6,7 +6,12 @@
 
     <groupId>com.sapient.dsm</groupId>
     <artifactId>dsm</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>dsm-service-registry</module>
+        <module>dsm-health</module>
+    </modules>
 
     <name>DSM</name>
     <description>Distributed Site Monitoring</description>
@@ -24,12 +29,21 @@
         <maven.version>3.1.1</maven.version>
 
     </properties>
+    <dependencyManagement>
+        <dependencies>
+            <!-- https://mvnrepository.com/artifact/io.dropwizard/dropwizard-core -->
+            <dependency>
+                <groupId>io.dropwizard</groupId>
+                <artifactId>dropwizard-core</artifactId>
+                <version>1.1.4</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
     <dependencies>
         <!-- https://mvnrepository.com/artifact/io.dropwizard/dropwizard-core -->
         <dependency>
             <groupId>io.dropwizard</groupId>
             <artifactId>dropwizard-core</artifactId>
-            <version>1.1.4</version>
         </dependency>
 
     </dependencies>
