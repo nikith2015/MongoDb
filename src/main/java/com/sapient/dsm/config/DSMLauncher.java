@@ -11,6 +11,5 @@ public class DSMLauncher extends Application<Configuration> {
     }
 
     public void run(Configuration configuration, Environment environment) throws Exception {
-        System.out.println("Hello world, by Dropwizard!");
     }
 }
