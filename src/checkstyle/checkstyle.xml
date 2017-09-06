@@ -26,9 +26,9 @@
             <property name="option" value="text"/>
         </module>
         <module name="com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"/>
-        <module name="com.puppycrawl.tools.checkstyle.checks.blocks.RightCurlyCheck">
+      <!--  <module name="com.puppycrawl.tools.checkstyle.checks.blocks.RightCurlyCheck">
             <property name="option" value="alone"/>
-        </module>
+        </module>-->
         <module name="com.puppycrawl.tools.checkstyle.checks.blocks.NeedBracesCheck"/>
         <module name="com.puppycrawl.tools.checkstyle.checks.blocks.AvoidNestedBlocksCheck"/>
 
@@ -58,13 +58,13 @@
             <property name="max" value="3"/>
         </module>
         <module name="com.puppycrawl.tools.checkstyle.checks.coding.MultipleVariableDeclarationsCheck"/>
-        <module name="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheck">
+       <!-- <module name="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheck">
             <property name="checkMethods" value="false"/>
             <property name="validateOnlyOverlapping" value="false"/>
-        </module>
+        </module>-->
         <module name="com.puppycrawl.tools.checkstyle.checks.coding.OneStatementPerLineCheck"/>
 
-        <!-- Imports -->
+       <!-- &lt;!&ndash; Imports &ndash;&gt;
         <module name="com.puppycrawl.tools.checkstyle.checks.imports.AvoidStarImportCheck"/>
         <module name="com.puppycrawl.tools.checkstyle.checks.imports.AvoidStaticImportCheck">
             <property name="excludes"
@@ -76,17 +76,13 @@
         <module name="com.puppycrawl.tools.checkstyle.checks.imports.RedundantImportCheck"/>
         <module name="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck">
             <property name="processJavadoc" value="true"/>
-        </module>
+        </module>-->
         <!-- <module name="com.puppycrawl.tools.checkstyle.checks.imports.ImportControlCheck">
              <property name="file" value="${main.basedir}/src/checkstyle/import-control.xml" />
              <property name="path" value="^.*[\\/]src[\\/]main[\\/].*$" />
          </module>-->
-        <module name="com.puppycrawl.tools.checkstyle.checks.imports.ImportOrderCheck">
-            <property name="groups" value="java,/^javax?\./,*,org.springframework"/>
-            <property name="ordered" value="true"/>
-            <property name="separated" value="true"/>
-            <property name="option" value="bottom"/>
-            <property name="sortStaticImportsAlphabetically" value="true"/>
+        <module name="com.puppycrawl.tools.checkstyle.checks.indentation.CommentsIndentationCheck">
+            <property name="tokens" value="BLOCK_COMMENT_BEGIN"/>
         </module>
 
         <!-- &lt;!&ndash; Javadoc Comments &ndash;&gt;
@@ -117,10 +113,14 @@
          </module>
  -->
         <!-- Miscellaneous -->
-        <module name="com.puppycrawl.tools.checkstyle.checks.indentation.CommentsIndentationCheck">
-            <property name="tokens" value="BLOCK_COMMENT_BEGIN"/>
-        </module>
         <module name="com.puppycrawl.tools.checkstyle.checks.UpperEllCheck"/>
+       <!-- <module name="com.puppycrawl.tools.checkstyle.checks.imports.ImportOrderCheck">
+            <property name="groups" value="java,/^javax?\./,*,org.springframework"/>
+            <property name="ordered" value="true"/>
+            <property name="separated" value="true"/>
+            <property name="option" value="bottom"/>
+            <property name="sortStaticImportsAlphabetically" value="true"/>
+        </module>-->
         <module name="com.puppycrawl.tools.checkstyle.checks.ArrayTypeStyleCheck"/>
         <module name="com.puppycrawl.tools.checkstyle.checks.OuterTypeFilenameCheck"/>
 
