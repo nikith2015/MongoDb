@@ -3,6 +3,7 @@ package com.sapient.dsm.config;
 import com.codahale.metrics.health.HealthCheck;
 import com.sapient.dsm.DSMSpringConfiguration;
 import com.sapient.dsm.SpringContextLoaderListener;
+import com.sapient.dsm.exception.DSMExceptionMapper;
 import io.dropwizard.Application;
 import io.dropwizard.Configuration;
 import io.dropwizard.setup.Environment;
@@ -35,6 +36,7 @@ public class DSMLauncher extends Application<Configuration> {
             environment.jersey().register(entry.getValue());
         }
 
-        environment.servlets().addServletListeners(new SpringContextLoaderListener(ctx));
+        //environment.servlets().addServletListeners(new SpringContextLoaderListener(ctx));
+        environment.jersey().register(new DSMExceptionMapper());
     }
 }
