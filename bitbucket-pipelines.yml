@@ -4,7 +4,7 @@ pipelines:
   default:
     - step:
         caches:
-          - maven 
+          - maven
         script:
             - mvn -B verify
   branches:
@@ -12,5 +12,3 @@ pipelines:
       - step:
           script:
             - mvn -B verify
-     
-     
