@@ -4,6 +4,7 @@ import com.sapient.dsm.config.config.SpringConfig;
 import io.dropwizard.Application;
 import io.dropwizard.Configuration;
 import io.dropwizard.setup.Environment;
+
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class DSMLauncher extends Application<Configuration> {
