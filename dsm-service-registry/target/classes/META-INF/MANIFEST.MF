@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Implementation-Title: dsm-service-registry
+Implementation-Version: 1.0-SNAPSHOT
+Built-By: vniki
+Specification-Vendor: Sapient
+Specification-Title: dsm-service-registry
+Implementation-Vendor-Id: com.sapient.dsm
+Build-Jdk: 1.8.0_151
+Specification-Version: 1.0-SNAPSHOT
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Sapient
+
